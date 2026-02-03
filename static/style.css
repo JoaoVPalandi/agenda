@@ -1,4 +1,80 @@
-p{
-    color : rgb(0, 0, 0)
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
 }
 
+p{
+    color : rgb(0, 0, 0);
+}
+
+form{
+    width: 350px;
+    align-items: center;
+    margin: 30px auto
+}
+
+input,button{
+    width: 350px;
+    padding: 14px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px black;
+}
+
+button{
+    background-color: rgb(0, 0, 255);
+    color: black;
+    border: 1px grey;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.form-card{
+    background: #f4f9ff; 
+    border-left: 6px solid; 
+    padding: 10px 18px 10px 18px;
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(0, 100, 255, 0.5);
+    border: 1px solid #dbeefc;
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 16px; 
+}
+
+.link-agenda{
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none; 
+}
+
+.home{
+    background: #f4f9ff; 
+    border-left: 6px solid; 
+    padding: 10px 20px 10px 20px;
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(0, 100, 255, 0.5);
+    border: 1px solid #dbeefc;
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 16px;
+    text-decoration: none; 
+    flex-direction: column;
+}
