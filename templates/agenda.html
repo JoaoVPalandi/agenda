@@ -10,7 +10,26 @@
         <button type="submit">Adicionar Tarefa</button>
     </form>
 </div>
-    <p>{{ tarefa.titulo_tarefa }} - {{ tarefa.data_conclusao }}</p>
+<h2>Lista de Tarefas</h2>
+<div class="tarefa-card">
+{% if tarefas %}
+
+    <ul>
+        {%for tarefa in tarefas%}
+            <li>{{ tarefa.titulo_tarefa }} - {{ tarefa.data_conclusao }}</li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+
+    <p>Nem uma tarefa cadastrada</p>
+
+{% endif %}
+        <div class="botoes">
+            <button class="button-excluir">Excluir</button>
+            <button class="button-concluir">Concluido</button>
+        </div>
+</div>
 {% endblock %}
 
 
