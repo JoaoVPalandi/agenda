@@ -16,7 +16,7 @@
 
     <ul>
         {%for tarefa in tarefas%}
-            <li>{{ tarefa.titulo_tarefa }} - {{ tarefa.data_conclusao }}</li>
+            <li>{{ tarefa.titulo_tarefa }} - {{ tarefa.data_conclusao }} <a href="{{ url_for ('delete', idTarefa=tarefa.id_tarefa) }}">Apagar</a></li>
         {% endfor %}
     </ul>
 
@@ -25,10 +25,6 @@
     <p>Nem uma tarefa cadastrada</p>
 
 {% endif %}
-        <div class="botoes">
-            <button class="button-excluir">Excluir</button>
-            <button class="button-concluir">Concluido</button>
-        </div>
 </div>
 {% endblock %}
 
