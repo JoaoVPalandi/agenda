@@ -28,7 +28,7 @@
         {% if tarefas %}
             <ul>
                 {% for tarefa in tarefas %}
-                    <li>
+                    <li class="tarefa-finalizada">
                         <span class="tarefa-texto">
                             {{ tarefa.titulo_tarefa }} <br> 
                             <small>{{ tarefa.data_conclusao }}</small>
@@ -37,7 +37,7 @@
                         <div class="tarefa-actions">
                             <a href="{{ url_for('update', idTarefa=tarefa.id_tarefa) }}" class="btn-updatee">Editar</a>
                             <a href="{{ url_for('delete', idTarefa=tarefa.id_tarefa) }}" class="btn-delete">Apagar</a>
-                            <a href="{{ url_for('finalizar', idTarefa=tarefa.id_tarefa) }}" class="btn-finalizar">Finalizar</a>
+                            <a href="{{ url_for('concluir', idTarefa=tarefa.id_tarefa) }}" class="btn-concluir">Concluir</a>
                         </div>
                     </li>
                 {% endfor %}

@@ -173,3 +173,15 @@ li {
     text-align: center;
     color: #666;
 }
+
+/* Estilo para a tarefa quando estiver concluída */
+.tarefa-finalizada .tarefa-texto {
+    text-decoration: line-through; 
+    color: #888; 
+    opacity: 0.7;
+}
+
+.tarefa-finalizada {
+    border-left: 5px solid #0c00b4; 
+    background-color: #f9f9f9;
+}
