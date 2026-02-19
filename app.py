@@ -45,6 +45,12 @@ def update(idTarefa):
     tarefa_selecionada = Tarefa.id(idTarefa)
     return render_template('agenda.html', titulo=f'Editando a tarefa ID: {idTarefa}',tarefa_selecionada=tarefa_selecionada, tarefas=tarefas )
 
+@app.route('/finalizar/<int:idTarefa>', methods=['GET', 'POST'])
+def finalizar(idTarefa):
+    tarefa = Tarefa.id(idTarefa)
+    tarefa.finalizar_tarefa()
+    return redirect(url_for('agenda'))
+
 @app.route('/ola')
 def ola_mundo():
     return "Olá, Mundo!"
