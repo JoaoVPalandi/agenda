@@ -144,7 +144,7 @@ li {
     gap: 5px;
 }
 
-.btn-updatee, .btn-delete {
+.btn-update, .btn-delete {
     padding: 8px 12px;
     border-radius: 6px;
     text-decoration: none;
@@ -154,7 +154,7 @@ li {
     transition: opacity 0.2s;
 }
 
-.btn-updatee {
+.btn-update {
     background-color: rgb(0, 100, 255); 
 }
 
@@ -162,7 +162,7 @@ li {
     background-color: rgb(0, 0, 200); 
 }
 
-.btn-updatee:hover, .btn-delete:hover {
+.btn-update:hover, .btn-delete:hover {
     opacity: 0.8;
 }
 
@@ -174,14 +174,9 @@ li {
     color: #666;
 }
 
-/* Estilo para a tarefa quando estiver concluída */
-.tarefa-finalizada .tarefa-texto {
+
+.tarefa-finalizada{
     text-decoration: line-through; 
     color: #888; 
     opacity: 0.7;
-}
-
-.tarefa-finalizada {
-    border-left: 5px solid #0c00b4; 
-    background-color: #f9f9f9;
 }
