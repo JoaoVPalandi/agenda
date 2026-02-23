@@ -29,7 +29,7 @@
             <ul>
                 {% for tarefa in tarefas %}
                    <li class="{% if tarefa.concluida == 1 %}tarefa-finalizada{% endif %}">
-                        <span>{{ tarefa.titulo_tarefa }}</span>
+                        <span>{{ tarefa.titulo_tarefa }}|{{ tarefa.data_conclusao }}</span>
                         <div class="tarefa-actions"> <a href="{{ url_for('update', idTarefa=tarefa.id_tarefa) }}" class="btn-update">Editar</a>
         
                             {% if tarefa.concluida == 1 %}
