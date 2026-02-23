@@ -180,3 +180,49 @@ li {
     color: #888; 
     opacity: 0.7;
 }
+
+/* --- Estilização dos Novos Botões --- */
+
+.btn-concluir, .btn-reabrir {
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-align: center;
+}
+.btn-concluir {
+    background-color: #28a745;
+    border: 1px solid #218838;
+}
+
+.btn-concluir:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-reabrir {
+    background-color: #ffc107;
+    color: #212529;
+    border: 1px solid #e0a800;
+}
+
+.btn-reabrir:hover {
+    background-color: #e0a800;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tarefa-finalizada span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+.tarefa-finalizada a {
+    text-decoration: none;
+}
