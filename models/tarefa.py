@@ -12,7 +12,7 @@ class Tarefa:
         self.id_tarefa: Optional[int] = id_tarefa
         self.concluida: Optional[int] = concluida
 
-    @classmethod
+    @classmethod #todo meteodo é uma função
     def id(cls, id: int) -> Self:
         with Database() as db:
             query: str = 'SELECT titulo_tarefa, data_conclusao, concluida FROM tarefas WHERE id = ?;'
