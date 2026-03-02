@@ -5,10 +5,15 @@ from dotenv import load_dotenv
 import traceback
 import os
 
-load_dotenv() # Procura um arquivo .env com variáveis 
-DB_PATH = os.getenv('DATABASE', './data/tarefas.sqlite3')
+load_dotenv()
+DB_PATH = os.getenv("DATABASE", "./data/tarefas.sqlite3")
+
 
 def init_db(db_name: str = DB_PATH):
+    data_dir = os.path.join(os.getcwd(), "data")
+
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir, exist_ok=True)
     with connect(db_name) as conn:
         conn.execute("""
         CREATE TABLE IF NOT EXISTS tarefas (
@@ -19,10 +24,14 @@ def init_db(db_name: str = DB_PATH):
         );
         """)
 
+
 class Database:
     """
-        Classe que regencia conexões e operações com o banco de dados SQLitre. Utiliza o protocolo de gerenciamento de contxtos para garantir qua a conexão seja encerrada corretamente
+    Classe que regencia conexões e operações com o banco de dados SQLitre. 
+    Utiliza o protocolo de gerenciamento de contxtos para garantir 
+    qua a conexão seja encerrada corretamente
     """
+
     def __init__(self, db_name: str = DB_PATH) -> None:
         self.connection: Connection = connect(db_name)
         self.cursor: Cursor = self.connection.cursor()
@@ -46,13 +55,9 @@ class Database:
     def close(self) -> None:
         self.connection.close()
 
-    # Métodos para o gerenciamento de contexto
-
-    # Método de entrada do contexto
     def __enter__(self) -> Self:
         return self
 
-    # Método de saída do contexto
     def __exit__(
         self,
         exc_type: Optional[Type[BaseException]],
@@ -67,4 +72,3 @@ class Database:
             traceback.print_tb(tb)
 
         self.close()
-
